@@ -17,6 +17,7 @@
 	["1Rnd_Smoke_Grenade_shell", 4],
 	["1Rnd_SmokeRed_Grenade_shell", 2],
 	["Chemlight_green",5],
+	["Toolkit",20],
 	["rhs_weap_M136", 3] // no comma 
 ];
 
