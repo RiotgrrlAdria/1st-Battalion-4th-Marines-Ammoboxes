@@ -1,0 +1,6 @@
+config.cpp contains the classes relating to the box names and contents. This file will need heavy editing!
+
+default loadouts are 50% done. Cross check them with config.cpp to see where recon stuff is being called and pull that shit out out of config.cpp (if I havent already done that....its 0109 and I'm fucking tired). Also check to see what shit I need in vehicles boxes. Whatever isn't needed needs to be pulled out from defaultloadouts folder.
+
+NEED TO CROSS CHECK cratefunctions, cratemodel, cratesigns and loadoutmanager. Pull out any 24thmeu references. I've removed quite a few boxes and signs form config.cpp, so quite a few things will need to be pulled out from the various files.
+

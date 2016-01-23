@@ -1,0 +1,1 @@
+bas and inf have been updated. I havent touched recon or vehicle as I don't know where recon content is being called, and I need to cross check vehicle with supply in config.cpp and remove any items not needed.
