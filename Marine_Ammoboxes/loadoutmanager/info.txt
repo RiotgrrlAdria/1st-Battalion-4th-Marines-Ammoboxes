@@ -1,4 +1,4 @@
-// 24th Loadout Manager 2
+// 1/4 Loadout Manager 2
 // Fight9
 // built on Riouken's framework
 
