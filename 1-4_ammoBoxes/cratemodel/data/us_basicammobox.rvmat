@@ -12,7 +12,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 
 class Stage1 {
-	texture = "meu_ammoBoxes\crateModel\data\usbasic_wood_nohq.paa";
+	texture = "Marine_Ammoboxes\crateModel\data\usbasic_wood_nohq.paa";
 	uvSource = "tex";
 	
 	class uvTransform {
@@ -24,7 +24,7 @@ class Stage1 {
 };
 
 class Stage2 {
-	texture = "meu_ammoBoxes\crateModel\data\usbasic_wood_dt.paa";
+	texture = "Marine_Ammoboxes\crateModel\data\usbasic_wood_dt.paa";
 	uvSource = "tex1";
 	
 	class uvTransform {
@@ -36,7 +36,7 @@ class Stage2 {
 };
 
 class Stage3 {
-	texture = "meu_ammoBoxes\crateModel\data\us_basicammobox_mc.paa";
+	texture = "Marine_Ammoboxes\crateModel\data\us_basicammobox_mc.paa";
 	//texture = "ammoboxes\data\us_basicexplosives_mc.paa";
 	uvSource = "tex1";
 	
@@ -49,7 +49,7 @@ class Stage3 {
 };
 
 class Stage4 {
-	texture = "meu_ammoBoxes\crateModel\data\us_basicexplosives_ads.paa";
+	texture = "Marine_Ammoboxes\crateModel\data\us_basicexplosives_ads.paa";
 	uvSource = "tex1";
 	
 	class uvTransform {
@@ -61,7 +61,7 @@ class Stage4 {
 };
 
 class Stage5 {
-	texture = "meu_ammoBoxes\crateModel\data\usbasic_wood_smdi.paa";
+	texture = "Marine_Ammoboxes\crateModel\data\usbasic_wood_smdi.paa";
 	uvSource = "tex";
 	
 	class uvTransform {
