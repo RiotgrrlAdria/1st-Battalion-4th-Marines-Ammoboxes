@@ -1,7 +1,7 @@
 #define VERSION_DATE	23.01.16 // release date (DD.MM.YY) is used for the version
 #include "script_macros.hpp"
 
-//23.01.16 update: updated the folders to point from Marine_Ammoboxes to Marine_Ammoboxes. Also did some tiding
+//24.01.16 update: updated the folders to point from Marine_Ammoboxes to Marine_Ammoboxes. Also did some tiding
 
 
 class CfgPatches
@@ -100,10 +100,13 @@ class CfgVehicles
 			// GOGGLES
 			mar_CLASS_ITEM(rhsusf_ANPVS_15,15)
 			// HELMETS
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_M1942,15)
 			
 			// UNIFORMS
 			mar_CLASS_ITEM(rhs_uniform_FROG01_d,15)
@@ -221,21 +224,13 @@ class CfgVehicles
 			// GOGGLES
 			mar_CLASS_ITEM(rhsusf_ANPVS_15,15)
 			// HELMETS
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_alt_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_alt,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_alt_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_arc,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_arc_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_arc,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_arc_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_M1942,15)
 			mar_CLASS_ITEM(rhs_Booniehat_marpatd,15)
 			mar_CLASS_ITEM(rhs_Booniehat_marpatwd,15)
 			
@@ -381,21 +376,13 @@ class CfgVehicles
 			// GOGGLES
 			mar_CLASS_ITEM(rhsusf_ANPVS_15,15)
 			// HELMETS
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_alt_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_alt,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_alt_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_arc,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_arc_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_arc,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_arc_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_M1942,15)
 			mar_CLASS_ITEM(rhs_Booniehat_marpatd,15)
 			mar_CLASS_ITEM(rhs_Booniehat_marpatwd,15)
 			mar_CLASS_ITEM(rhs_Booniehat_m81,15)
@@ -544,21 +531,13 @@ class CfgVehicles
 			// GOGGLES
 			mar_CLASS_ITEM(rhsusf_ANPVS_15,15)
 			// HELMETS
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_alt_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_alt,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_alt_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_arc,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_arc_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_arc,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_arc_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_M1942,15)
 			mar_CLASS_ITEM(rhs_Booniehat_marpatd,15)
 			mar_CLASS_ITEM(rhs_Booniehat_marpatwd,15)
 			
@@ -674,10 +653,13 @@ class CfgVehicles
 			// GOGGLES
 			mar_CLASS_ITEM(rhsusf_ANPVS_15,15)
 			// HELMETS
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_M1942,15)
 			mar_CLASS_ITEM(rhs_Booniehat_marpatwd,15)
 			mar_CLASS_ITEM(rhs_Booniehat_marpatd,15)
 			
@@ -797,22 +779,13 @@ class CfgVehicles
 			// GOGGLES
 			mar_CLASS_ITEM(rhsusf_ANPVS_15,15)
 			// HELMETS
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_alt,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_alt_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_alt,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_alt_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_arc,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatwd_norotos_arc_headset,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_arc,15)
-			mar_CLASS_ITEM(rhsusf_mich_helmet_marpatd_norotos_arc_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_ess,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_marpatwd_headset,15)
+			mar_CLASS_ITEM(rhsusf_lwh_helmet_M1942,15)
 			mar_CLASS_ITEM(rhs_Booniehat_m81,15)
 			mar_CLASS_ITEM(rhs_Booniehat_marpatwd,15)
 			mar_CLASS_ITEM(rhs_Booniehat_marpatd,15)
@@ -1097,6 +1070,7 @@ class CfgVehicles
 			mar_CLASS_MAG(rhs_mag_M661_green,10)
 			mar_CLASS_MAG(rhs_mag_M662_red,10)
 			mar_CLASS_MAG(rhs_mag_M585_white,10)
+			mar_CLASS_MAG(ToolKit,25)
         }; 
         class TransportWeapons 
 		{
