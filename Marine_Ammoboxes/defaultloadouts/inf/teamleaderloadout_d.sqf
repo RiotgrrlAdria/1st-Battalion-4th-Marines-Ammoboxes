@@ -1,4 +1,4 @@
-// REVISION 11JAN16
+// REVISION 24JAN16
 
 //USMC Team Leader Desert Loadout
  _unit = _this select 1;
@@ -13,7 +13,7 @@
  removeheadgear _unit;
 
 _unit addvest "rhsusf_spc_teamleader";
- _unit addheadgear "rhsusf_mich_helmet_marpatd_headset";
+ _unit addheadgear "rhsusf_lwh_helmet_marpatd_ess";
 
  _unit unassignItem "nvgoggles";
  _unit removeItem "nvgoggles";
