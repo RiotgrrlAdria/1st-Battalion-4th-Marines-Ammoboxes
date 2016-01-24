@@ -1,4 +1,4 @@
-// RCT 6 loadout manager 2
+// 1/4 loadout manager 2
 // fight9
 // built on Riouken's framework
 

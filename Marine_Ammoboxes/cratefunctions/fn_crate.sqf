@@ -1,13 +1,13 @@
 /*
 fn_crate
-grab meu crate config data and apply it
+grab mar crate config data and apply it
 fight9
 
 params:
 _this: object - the crate
 */
 
-#include "\RCT6_ammoBoxes\script_macros.hpp"
+#include "\Marine_Ammoboxes\script_macros.hpp"
 
 private ["_crate","_cfg"];
 // params
@@ -23,15 +23,15 @@ _crate allowDamage false;
 _cfg = configFile >> "CfgVehicles" >> typeOf _crate;
 
 // manager
-if ([_cfg,"MEU_MANAGER",0] call BIS_fnc_returnConfigEntry > 0) then {
-	_LOM = ["init",[_crate]] call meu_fnc_manager;
+if ([_cfg,"mar_MANAGER",0] call BIS_fnc_returnConfigEntry > 0) then {
+	_LOM = ["init",[_crate]] call mar_fnc_manager;
 };
 
 // loadouts
 {
 	_crate addAction [
 		("<t color=""#DB3503"">" + (_x select 0) + "</t>"),
-		MEU_LOADOUT_ROOT + (_x select 1),
+		mar_LOADOUT_ROOT + (_x select 1),
 		[],
 		3,
 		true,
@@ -39,6 +39,6 @@ if ([_cfg,"MEU_MANAGER",0] call BIS_fnc_returnConfigEntry > 0) then {
 		"",
 		"_this distance _target < 10 && vehicle player == player"
 	];
-} forEach ([_cfg,"MEU_LOADOUTS",[]] call BIS_fnc_returnConfigEntry);
+} forEach ([_cfg,"mar_LOADOUTS",[]] call BIS_fnc_returnConfigEntry);
 
 true
