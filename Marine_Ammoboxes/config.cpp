@@ -1,4 +1,4 @@
-#define VERSION_DATE	23.01.16 // release date (DD.MM.YY) is used for the version
+#define VERSION_DATE	24.01.16 // release date (DD.MM.YY) is used for the version
 #include "script_macros.hpp"
 
 //24.01.16 update: updated the folders to point from Marine_Ammoboxes to Marine_Ammoboxes. Also did some tiding
