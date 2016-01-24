@@ -1,6 +1,6 @@
-// REVISION 11JAN16
+// REVISION 24JAN16
 
-//USMC Team Leader Woodland Loadout
+//USMC Team Leader Desert Loadout
  _unit = _this select 1;
  
  if (!local _unit) exitWith {};
@@ -13,7 +13,7 @@
  removeheadgear _unit;
 
 _unit addvest "rhsusf_spc_teamleader";
- _unit addheadgear "rhsusf_mich_helmet_marpatwd_headset";
+ _unit addheadgear "rhsusf_lwh_helmet_marpatd_ess";
 
  _unit unassignItem "nvgoggles";
  _unit removeItem "nvgoggles";
@@ -69,4 +69,4 @@ _unit addvest "rhsusf_spc_teamleader";
  _unit addmagazine "rhs_mag_an_m8hc";
   _unit additem "ACE_EarPlugs";
  
- _unit adduniform "rhs_uniform_FROG01_wd";
+ _unit adduniform "rhs_uniform_FROG01_d";
