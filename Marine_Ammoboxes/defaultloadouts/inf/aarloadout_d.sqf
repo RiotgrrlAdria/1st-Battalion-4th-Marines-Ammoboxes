@@ -1,4 +1,4 @@
-// REVISION 11JAN16
+// REVISION 24JAN16
 
 //USMC Asst Autorifleman Desert Loadout
  _unit = _this select 1;
@@ -13,7 +13,7 @@
  removeheadgear _unit;
 
  _unit addvest "rhsusf_spc_rifleman";
- _unit addheadgear "rhsusf_mich_helmet_marpatd"; 
+ _unit addheadgear "rhsusf_lwh_helmet_marpatd"; 
 
  _unit unassignItem "nvgoggles";
  _unit removeItem "nvgoggles";
