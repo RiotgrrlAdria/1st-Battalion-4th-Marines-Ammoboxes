@@ -2,15 +2,15 @@
 // fight9
 // built on Riouken's framework
 
-#define MEU_ADDON_ROOT			"\RCT6_ammoBoxes\"
-#define MEU_LOADOUT_ROOT		"\RCT6_ammoBoxes\defaultLoadouts\"
+#define mar_ADDON_ROOT			"\Marine_Ammoboxes\"
+#define mar_LOADOUT_ROOT		"\Marine_Ammoboxes\defaultLoadouts\"
 
 // messages
-#define MESSAGE_HEADER			(format ["<t color='%1' size='1.2' underline='1'>1-4th LOADOUT MANAGER 2</t>",COLOR_MU_BG_HTML])
-#define ACTION_NAME 			format ["<t size='1.1'><img image='%1' /> 1-4th Loadout Manager</t>",ICON_CRATE]
+#define MESSAGE_HEADER			(format ["<t color='%1' size='1.2' underline='1'>1/4 LOADOUT MANAGER 2</t>",COLOR_MU_BG_HTML])
+#define ACTION_NAME 			format ["<t size='1.1'><img image='%1' /> 1/4 Loadout Manager</t>",ICON_CRATE]
 
 // Main Functions
-#define FUNCTION_NAME 			meu_fnc_manager
+#define FUNCTION_NAME 			mar_fnc_manager
 #define CALL_FNC(SUB,PARAM) 	[SUB,PARAM] call FUNCTION_NAME
 #define SPAWN_FNC(SUB,PARAM) 	[SUB,PARAM] spawn FUNCTION_NAME
 #define STR_CALL_FUNC(SUB,PARAM) #[SUB,PARAM] call FUNCTION_NAME
@@ -48,8 +48,8 @@
 
 // gear checks
 #define ALLOWED_GOGGLES			["G_B_Diving","AV_ESS_blk","AV_ESS_blk_clr","AV_ESS_tan","AV_ESS_tan_clr","AV_ESS_grn","AV_ESS_grn_clr","G_Aviator","G_Shades_Green","G_Shades_Red","G_Shades_Black","G_Shades_Blue","G_Lowprofile","G_Sport_BlackWhite","G_Sport_Blackyellow","G_Sport_Red","G_Sport_Blackred"]
-#define MEU_CLASS_EARBUDS		"ACE_EarPlugs" // "AGM_EarBuds"
-#define MEU_EARBUD_CHECK		player getVariable ["ACE_hasEarPlugsin", false] // player getVariable ["AGM_hasEarPlugsin", false]
+#define mar_CLASS_EARBUDS		"ACE_EarPlugs" // "AGM_EarBuds"
+#define mar_EARBUD_CHECK		player getVariable ["ACE_hasEarPlugsin", false] // player getVariable ["AGM_hasEarPlugsin", false]
 #define TFAR_CHECK				isClass (configfile >> "CfgPatches" >> "task_force_radio")
 #define ACTION_CONDITION		"_this distance _target < 10 && {vehicle player == player}"
 #define CHECK_LOADOUT(ARRAY)	( count ARRAY < 2 || {count (ARRAY select 1) < 1} ) 
@@ -98,12 +98,12 @@
 									};
 
 // tooltip tips used randomly
-#define MEU_HELP_TIPS			[ \
+#define mar_HELP_TIPS			[ \
 			"TIP: Double Click On A Saved Loadout To See The Items", \
 			"TIP: The White X Denotes Gear That Is Not In The Box", \
 			"TIP: You Can Quick Save By Holding CTRL When Clicking Save", \
 			"TIP: Rename A Loadout By Holding CTRL And Double Clicking On It", \
-			"CREDIT: The Original 1-4th Loadout Manager Was Created By Riouken", \
+			"CREDIT: The Original 1/4 Loadout Manager Was Created By Riouken", \
 			"CREATORS: You Can Unlock The Box Restrictions With A Simple Variable", \
 			"COLORS: The Colors Of The Manager Change With Your Arma Settings", \
 			"UPDATE: Loaded Magazines And Batteries Are Now Saved", \
@@ -112,33 +112,33 @@
 			"TIP: You Can Delete Saved Loadouts With The DEL Key" \
 		]
 
-#define MEU_HELP_HINT 	"<t color='#85a2af' size='1.2' underline='1'>1-4th LOADOUT MANAGER 2</t><br /><br />1-4th AmmoBoxes come with a loadout manager. There are a few things you should know.<br /><br />Make your loadouts exactly how you want them. Including your radio frequencies.<br /><br /><t align='left'><t color='#015DC5'>Double Click</t> - View gear in saved loadout.<br /><t color='#015DC5'>CTRL + Double Click</t> - Rename Loadout.<br /><t color='#015DC5'>SHFT + Double Click</t> - Add to favorites.<br /><t color='#015DC5'>CTRL + Click Save</t> - Quick save loadout with the same name<br /><t color='#015DC5'>DEL</t> - Delete Loadout.</t><br /><br />Enjoy!"
+#define mar_HELP_HINT 	"<t color='#85a2af' size='1.2' underline='1'>1/4 LOADOUT MANAGER 2</t><br /><br />1/4 AmmoBoxes come with a loadout manager. There are a few things you should know.<br /><br />Make your loadouts exactly how you want them. Including your radio frequencies.<br /><br /><t align='left'><t color='#015DC5'>Double Click</t> - View gear in saved loadout.<br /><t color='#015DC5'>CTRL + Double Click</t> - Rename Loadout.<br /><t color='#015DC5'>SHFT + Double Click</t> - Add to favorites.<br /><t color='#015DC5'>CTRL + Click Save</t> - Quick save loadout with the same name<br /><t color='#015DC5'>DEL</t> - Delete Loadout.</t><br /><br />Enjoy!"
 		
 // controls
-#define MEU_CTRL_GEARTREE		15040
-#define MEU_CTRL_SAVEDLIST		15041
-#define MEU_CTRL_DEFAULTLIST	15042
-#define MEU_CTRL_HELPTIP		15020
-#define MEU_CTRL_FAVORITE		15021
-#define MEU_CTRL_PREVTREE		15030
-#define MEU_CTRL_PREVBG			15031
-#define MEU_CTRL_PREVCLOSE		15032
-#define MEU_CTRL_PREVTEXT		15033
-#define MEU_CTRL_BUTTONLOAD		15050
-#define MEU_CTRL_BUTTONDELETE	15051
-#define MEU_CTRL_BUTTONDEFAULT	15052
-#define MEU_CTRL_BUTTONSAVE		15053
-#define MEU_CTRL_BUTTONCLOSE	15054
-#define MEU_CTRL_SAVEBG			15060
-#define MEU_CTRL_SAVEEDIT		15061
-#define MEU_CTRL_SAVESAVE		15062
-#define MEU_CTRL_SAVECANCEL		15063
-#define MEU_CTRL_SAVETEXT		15064
-#define MEU_CTRL_SAVECLEAR		15065
-#define MEU_CTRL_SAVERENAME		15066
+#define mar_CTRL_GEARTREE		15040
+#define mar_CTRL_SAVEDLIST		15041
+#define mar_CTRL_DEFAULTLIST	15042
+#define mar_CTRL_HELPTIP		15020
+#define mar_CTRL_FAVORITE		15021
+#define mar_CTRL_PREVTREE		15030
+#define mar_CTRL_PREVBG			15031
+#define mar_CTRL_PREVCLOSE		15032
+#define mar_CTRL_PREVTEXT		15033
+#define mar_CTRL_BUTTONLOAD		15050
+#define mar_CTRL_BUTTONDELETE	15051
+#define mar_CTRL_BUTTONDEFAULT	15052
+#define mar_CTRL_BUTTONSAVE		15053
+#define mar_CTRL_BUTTONCLOSE	15054
+#define mar_CTRL_SAVEBG			15060
+#define mar_CTRL_SAVEEDIT		15061
+#define mar_CTRL_SAVESAVE		15062
+#define mar_CTRL_SAVECANCEL		15063
+#define mar_CTRL_SAVETEXT		15064
+#define mar_CTRL_SAVECLEAR		15065
+#define mar_CTRL_SAVERENAME		15066
 
 // groups
-#define MEU_SAVE_GROUP 			[MEU_CTRL_SAVEBG,MEU_CTRL_SAVEEDIT,MEU_CTRL_SAVESAVE,MEU_CTRL_SAVECANCEL,MEU_CTRL_SAVETEXT,MEU_CTRL_SAVECLEAR,MEU_CTRL_SAVERENAME]
-#define MEU_DISABLE_GROUP		[MEU_CTRL_GEARTREE,MEU_CTRL_SAVEDLIST,MEU_CTRL_DEFAULTLIST,MEU_CTRL_BUTTONSAVE,MEU_CTRL_BUTTONDEFAULT,MEU_CTRL_BUTTONDELETE,MEU_CTRL_BUTTONLOAD,MEU_CTRL_PREVTREE,MEU_CTRL_PREVBG,MEU_CTRL_PREVCLOSE,MEU_CTRL_PREVTEXT]
-#define MEU_PREV_GROUP			[MEU_CTRL_PREVTREE,MEU_CTRL_PREVBG,MEU_CTRL_PREVCLOSE,MEU_CTRL_PREVTEXT]
-#define MEU_EXTRA_BUTTONS		[MEU_CTRL_BUTTONDELETE,MEU_CTRL_BUTTONCLOSE,MEU_CTRL_BUTTONDEFAULT]
+#define mar_SAVE_GROUP 			[mar_CTRL_SAVEBG,mar_CTRL_SAVEEDIT,mar_CTRL_SAVESAVE,mar_CTRL_SAVECANCEL,mar_CTRL_SAVETEXT,mar_CTRL_SAVECLEAR,mar_CTRL_SAVERENAME]
+#define mar_DISABLE_GROUP		[mar_CTRL_GEARTREE,mar_CTRL_SAVEDLIST,mar_CTRL_DEFAULTLIST,mar_CTRL_BUTTONSAVE,mar_CTRL_BUTTONDEFAULT,mar_CTRL_BUTTONDELETE,mar_CTRL_BUTTONLOAD,mar_CTRL_PREVTREE,mar_CTRL_PREVBG,mar_CTRL_PREVCLOSE,mar_CTRL_PREVTEXT]
+#define mar_PREV_GROUP			[mar_CTRL_PREVTREE,mar_CTRL_PREVBG,mar_CTRL_PREVCLOSE,mar_CTRL_PREVTEXT]
+#define mar_EXTRA_BUTTONS		[mar_CTRL_BUTTONDELETE,mar_CTRL_BUTTONCLOSE,mar_CTRL_BUTTONDEFAULT]

@@ -2,19 +2,19 @@
 //CHANGELOG:
 
 //23.01.16
-//-updated various folder pointers from RCT6_ammoboxes to 1-4_ammoboxes
+//-updated various folder pointers from Marine_Ammoboxes to Marine_Ammoboxes
 
 
-#define MEU_ADDON_ROOT			"\1-4_ammoBoxes\"
-#define MEU_LOADOUT_ROOT		"\1-4_ammoBoxes\defaultLoadouts\"
+#define mar_ADDON_ROOT			"\Marine_Ammoboxes\"
+#define mar_LOADOUT_ROOT		"\Marine_Ammoboxes\defaultLoadouts\"
 
 #define QUOTE(A) 				#A
 
 // transport cargo classes
-#define MEU_CLASS_WEAP(WEAPON,COUNT) 	class _xx_##WEAPON {weapon = #WEAPON; count = COUNT;}
-#define MEU_CLASS_ITEM(ITEM,COUNT) 		class _xx_##ITEM {name = #ITEM; count = COUNT;}
-#define MEU_CLASS_MAG(MAGAZINE,COUNT) 	class _xx_##MAGAZINE {magazine = #MAGAZINE; count = COUNT;}
-#define MEU_CLASS_BAG(BAG,COUNT) 		class _xx_##BAG {backpack = #BAG; count = COUNT;}
+#define mar_CLASS_WEAP(WEAPON,COUNT) 	class _xx_##WEAPON {weapon = #WEAPON; count = COUNT;}
+#define mar_CLASS_ITEM(ITEM,COUNT) 		class _xx_##ITEM {name = #ITEM; count = COUNT;}
+#define mar_CLASS_MAG(MAGAZINE,COUNT) 	class _xx_##MAGAZINE {magazine = #MAGAZINE; count = COUNT;}
+#define mar_CLASS_BAG(BAG,COUNT) 		class _xx_##BAG {backpack = #BAG; count = COUNT;}
 
 // basic box info
 
@@ -24,7 +24,7 @@
 	#define ZEUS	curatorInfoTypeEmpty = "RscDisplayAttributesInventory";
 #endif
 
-#define MEU_CRATE_INFO(NAME) displayname = #NAME; \
+#define mar_CRATE_INFO(NAME) displayname = #NAME; \
 		transportmaxmagazines = 9999; \
 		transportmaxweapons = 9999; \
 		transportMaxBackpacks = 9999; \
@@ -32,49 +32,49 @@
 		MaximumLoad = 999999; \
 		scope = 2;  \
 		supplyRadius = 5; \
-		vehicleClass = "1-4_ammoBoxes"; \
-		MEU_INIT_EVENT("_this spawn meu_fnc_crate;") \
+		vehicleClass = "Marine_Ammoboxes"; \
+		mar_INIT_EVENT("_this spawn mar_fnc_crate;") \
 		ZEUS
 		
 // A2 Crates
-#define MEU_CRATE_SELECTIONS(PATH) hiddenSelectionsTextures[] = {MEU_TEXTURE_PATH(PATH),MEU_TEXTURE_PATH(usmc_side_final_co)};
-#define MEU_TEXTURE_PATH(PIC) __EVAL("1-4_ammoBoxes\crateModel\textures\" + #PIC + ".paa")
-#define MEU_CRATE_TEXTURE(PIC) \
-			model = "1-4_ammoBoxes\crateModel\Proxy_UsBasicAmmoBox"; \
+#define mar_CRATE_SELECTIONS(PATH) hiddenSelectionsTextures[] = {mar_TEXTURE_PATH(PATH),mar_TEXTURE_PATH(usmc_side_final_co)};
+#define mar_TEXTURE_PATH(PIC) __EVAL("Marine_Ammoboxes\crateModel\textures\" + #PIC + ".paa")
+#define mar_CRATE_TEXTURE(PIC) \
+			model = "Marine_Ammoboxes\crateModel\Proxy_UsBasicAmmoBox"; \
 			mapSize = 2; \
 			slingLoadCargoMemoryPoints[] = {"sling1","sling2","sling3","sling4"}; \
 			hiddenSelections[] = {"main","sides"}; \
-			MEU_CRATE_SELECTIONS(PIC)
+			mar_CRATE_SELECTIONS(PIC)
 		
 // eventhander		
-#define MEU_INIT_EVENT(STRING) 		class EventHandlers { init = STRING; };
+#define mar_INIT_EVENT(STRING) 		class EventHandlers { init = STRING; };
 
 // vehicle crate
-#define MEU_VIC_INFO(NAME)		displayname = #NAME; \
+#define mar_VIC_INFO(NAME)		displayname = #NAME; \
 		transportAmmo = 0; \
 		scope = 2; \
 		supplyRadius = 0; \
-		vehicleClass = "1-4_ammoBoxes"; \
-		MEU_INIT_EVENT("_this spawn meu_fnc_crate;") \
+		vehicleClass = "Marine_Ammoboxes"; \
+		mar_INIT_EVENT("_this spawn mar_fnc_crate;") \
 		ZEUS
 		
-#define MEU_VIC_FUNCTION(FILE) 	#[player,call compile preprocessFileLineNumbers (MEU_LOADOUT_ROOT + FILE),false,true] call meu_fnc_vehicleLoadout
-#define MEU_RED_NAME(TEXT) 		__EVAL("<t color='#FF0000'>" + TEXT + "</t>")
-#define MEU_GREEN_NAME(TEXT) 	__EVAL("<t color='#99FF00'>" + TEXT + "</t>")
+#define mar_VIC_FUNCTION(FILE) 	#[player,call compile preprocessFileLineNumbers (mar_LOADOUT_ROOT + FILE),false,true] call mar_fnc_vehicleLoadout
+#define mar_RED_NAME(TEXT) 		__EVAL("<t color='#FF0000'>" + TEXT + "</t>")
+#define mar_GREEN_NAME(TEXT) 	__EVAL("<t color='#99FF00'>" + TEXT + "</t>")
 
-#define MEU_VIC_LOADOUT(CLASS,TEXT,FILE)	class CLASS##: clearCargo { \
-				displayName = MEU_RED_NAME(TEXT); \
-				statement = MEU_VIC_FUNCTION(FILE); \
+#define mar_VIC_LOADOUT(CLASS,TEXT,FILE)	class CLASS##: clearCargo { \
+				displayName = mar_RED_NAME(TEXT); \
+				statement = mar_VIC_FUNCTION(FILE); \
 				};
 				
-#define MEU_VIC_LOADOUT_CLEAR	class clearCargo { \
+#define mar_VIC_LOADOUT_CLEAR	class clearCargo { \
 				userActionID = 50; \
-				displayName = MEU_GREEN_NAME("Clear Cargo"); \
+				displayName = mar_GREEN_NAME("Clear Cargo"); \
 				displayNameDefault = ""; \
 				position = "mph_axis"; \
 				radius = 10; \
 				animPeriod = 2; \
 				onlyForplayer = 1; \
 				condition = "(alive this) && (driver (vehicle player) == player) && (vehicle player in vehicles)"; \
-				statement = "[player,[],true,true] call meu_fnc_vehicleLoadout;"; \
+				statement = "[player,[],true,true] call mar_fnc_vehicleLoadout;"; \
 			};

@@ -1,4 +1,4 @@
-// 1-4th LOADOUT MANAGER 2
+// 1/4 LOADOUT MANAGER 2
 // fight9
 // built on Riouken's framework
 
@@ -15,12 +15,12 @@
 #define GUI_GRID_WAbs	(1)
 #define GUI_GRID_HAbs	(1)
 
-class meu_loadoutManager
+class mar_loadoutManager
 {
 	idd = 5555555;
 	movingEnable = true;
-	onLoad = "uiNamespace setVariable ['meu_managerGUI',(_this select 0)];";
-	onUnLoad = "missionNamespace setVariable ['meu_managerBOX',nil];";
+	onLoad = "uiNamespace setVariable ['mar_managerGUI',(_this select 0)];";
+	onUnLoad = "missionNamespace setVariable ['mar_managerBOX',nil];";
 	objects[] = {};
 	
 	class Controls
@@ -28,7 +28,7 @@ class meu_loadoutManager
 		////////////////////////////
 		//// FRAMES
 		////////////////////////////
-		class meu_LOHeader_Box_base // base class BOX
+		class mar_LOHeader_Box_base // base class BOX
 		{
 			idc = -1;
             x = 0 * GUI_GRID_W + GUI_GRID_X;
@@ -44,7 +44,7 @@ class meu_loadoutManager
 			sizeEx = 0.02;
 			text = "";
 		};
- 		class meu_LOBoxPic: meu_LOHeader_Box_base // base class BOX2
+ 		class mar_LOBoxPic: mar_LOHeader_Box_base // base class BOX2
 		{
 			idc = -1;
 			x = 12.1 * GUI_GRID_W + GUI_GRID_X; 
@@ -53,7 +53,7 @@ class meu_loadoutManager
 			h = 9 * GUI_GRID_H;
 			colorBackground[] = MAIN_BG_COLOR;
 		}; 
-		class meu_LOBoxSaved: meu_LOBoxPic
+		class mar_LOBoxSaved: mar_LOBoxPic
 		{
 			idc = -1;
 			text = "";
@@ -62,7 +62,7 @@ class meu_loadoutManager
 			w = 12 * GUI_GRID_W;
 			h = 20 * GUI_GRID_H;
 		};
-		class meu_LOBoxGear: meu_LOBoxPic
+		class mar_LOBoxGear: mar_LOBoxPic
 		{
 			idc = -1;
 			text = "";
@@ -71,7 +71,7 @@ class meu_loadoutManager
 			w = 18 * GUI_GRID_W;
 			h = 20 * GUI_GRID_H;
 		};
-		class meu_LOBoxLower: meu_LOBoxPic
+		class mar_LOBoxLower: mar_LOBoxPic
 		{
 			idc = -1;
 			x = 12.1 * GUI_GRID_W + GUI_GRID_X; 
@@ -82,9 +82,9 @@ class meu_loadoutManager
 		////////////////////////////
 		//// MAIN LISTS
 		////////////////////////////
-		class meu_LOListSaved_RscListBox_base // base class RscListBox
+		class mar_LOListSaved_RscListBox_base // base class RscListBox
 		{
-			idc = MEU_CTRL_SAVEDLIST;
+			idc = mar_CTRL_SAVEDLIST;
 			x = 1 * GUI_GRID_W + GUI_GRID_X;
 			y = 5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 10 * GUI_GRID_W;
@@ -148,9 +148,9 @@ class meu_loadoutManager
 			period = 1.2;
 			maxHistoryDelay = 1;
 		};
-		class meu_LOListGear_RscTree_base  // base class RscTree
+		class mar_LOListGear_RscTree_base  // base class RscTree
 		{
-			idc = MEU_CTRL_GEARTREE;
+			idc = mar_CTRL_GEARTREE;
 			x = 22 * GUI_GRID_W + GUI_GRID_X;
 			y = 5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 16 * GUI_GRID_W;
@@ -208,9 +208,9 @@ class meu_loadoutManager
 				"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"
 			};
 		};
-		class meu_LOListDefault: meu_LOListSaved_RscListBox_base 
+		class mar_LOListDefault: mar_LOListSaved_RscListBox_base 
 		{
-			idc = MEU_CTRL_DEFAULTLIST;
+			idc = mar_CTRL_DEFAULTLIST;
 			x = 12.6 * GUI_GRID_W + GUI_GRID_X; 
 			y = 14.07 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.8 * GUI_GRID_W;
@@ -222,10 +222,10 @@ class meu_loadoutManager
 		////////////////////////////
 		//// TEXT
 		////////////////////////////
-		class meu_LO_rscPicture_base // base class RscPicture
+		class mar_LO_rscPicture_base // base class RscPicture
 		{
 			idc = -1;
-			text = "\RCT6_ammoBoxes\loadoutManager\logo256.paa";
+			text = "\Marine_Ammoboxes\loadoutManager\logo256.paa";
 			/* x = 11.7 * GUI_GRID_W + GUI_GRID_X; // new logo
 			y = 3.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 10 * GUI_GRID_W;
@@ -250,14 +250,14 @@ class meu_loadoutManager
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 		};
-		class meu_LOTextHeader_RscText_base // base class RscText
+		class mar_LOTextHeader_RscText_base // base class RscText
 		{
 			idc = -1;
             x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 2.9 * GUI_GRID_H + GUI_GRID_Y; //1
             w = 39 * GUI_GRID_W;
             h = 1 * GUI_GRID_H;
-			text = "1-4th LOADOUT MANAGER 2";
+			text = "1/4 LOADOUT MANAGER 2";
 			shadow = 0;
 			deletable = 0;
 			fade = 0;
@@ -275,7 +275,7 @@ class meu_loadoutManager
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 		};
-		class meu_LOTextGear: meu_LOTextHeader_RscText_base
+		class mar_LOTextGear: mar_LOTextHeader_RscText_base
 		{
 			idc = -1;
             x = 22 * GUI_GRID_W + GUI_GRID_X;
@@ -286,7 +286,7 @@ class meu_loadoutManager
 			shadow = 0;
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 35) * 1)";
 		};
-		class meu_LOTextSaved: meu_LOTextHeader_RscText_base
+		class mar_LOTextSaved: mar_LOTextHeader_RscText_base
 		{
 			idc = -1;
             x = 1 * GUI_GRID_W + GUI_GRID_X;
@@ -297,7 +297,7 @@ class meu_loadoutManager
 			shadow = 0;
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 35) * 1)";
 		};
-		class meu_LOTextDefault: meu_LOTextHeader_RscText_base
+		class mar_LOTextDefault: mar_LOTextHeader_RscText_base
 		{
 			idc = -1;
             x = 12.6 * GUI_GRID_W + GUI_GRID_X;
@@ -311,7 +311,7 @@ class meu_loadoutManager
 		////////////////////////////
 		//// MAIN BUTTONS
 		////////////////////////////
-		class meu_LOXClose_RscActiveText_base // base class RscActiveText
+		class mar_LOXClose_RscActiveText_base // base class RscActiveText
 		{
 			idc = -1;
 			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa";
@@ -343,9 +343,9 @@ class meu_loadoutManager
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 		};
-		class meu_LOXTip: meu_LOXClose_RscActiveText_base
+		class mar_LOXTip: mar_LOXClose_RscActiveText_base
 		{
-			idc = MEU_CTRL_HELPTIP;
+			idc = mar_CTRL_HELPTIP;
 			text = ICON_HELPTIPS;
 			tooltip = "Double Click On A Saved Loadout To See The Items.";
 			action = "";
@@ -359,9 +359,9 @@ class meu_loadoutManager
 			w = 1 * GUI_GRID_W;
 			h = 0.9 * GUI_GRID_H;
 		};
-		class meu_LOFav: meu_LOXClose_RscActiveText_base
+		class mar_LOFav: mar_LOXClose_RscActiveText_base
 		{
-			idc = MEU_CTRL_FAVORITE;
+			idc = mar_CTRL_FAVORITE;
 			text = ICON_FAVORITE;
 			tooltip = "Set Selected As Favorite.";
 			action = "";
@@ -377,9 +377,9 @@ class meu_loadoutManager
 			
 			onMouseButtonClick = STR_CALL_FUNC("buttons",_this);
 		};
-		class meu_LOButton_RscButton_base // base class RscButton
+		class mar_LOButton_RscButton_base // base class RscButton
 		{
-			idc = MEU_CTRL_BUTTONLOAD;
+			idc = mar_CTRL_BUTTONLOAD;
 			x = 0 * GUI_GRID_W + GUI_GRID_X;
 			y = 24.03 * GUI_GRID_H + GUI_GRID_Y;
 			action = STR_CALL_FUNC("loadSaved",[]);
@@ -474,9 +474,9 @@ class meu_loadoutManager
 				bottom = 0;
 			};
 		};
-		class meu_LOButtonDelete: meu_LOButton_RscButton_base
+		class mar_LOButtonDelete: mar_LOButton_RscButton_base
 		{
-			idc = MEU_CTRL_BUTTONDELETE;
+			idc = mar_CTRL_BUTTONDELETE;
 			x = 5.03 * GUI_GRID_W + GUI_GRID_X;
 			y = 24.03 * GUI_GRID_H + GUI_GRID_Y;
 			text = "DELETE";
@@ -485,18 +485,18 @@ class meu_loadoutManager
 			
 			onMouseButtonClick = STR_CALL_FUNC("buttons",_this);
 		};
-		class meu_LOButtonDefault: meu_LOButton_RscButton_base
+		class mar_LOButtonDefault: mar_LOButton_RscButton_base
 		{
-			idc = MEU_CTRL_BUTTONDEFAULT;
+			idc = mar_CTRL_BUTTONDEFAULT;
 			x = 14 * GUI_GRID_W + GUI_GRID_X;
 			y = 24.03 * GUI_GRID_H + GUI_GRID_Y;
 			action = STR_CALL_FUNC("loadDefault",[]);
 			text = "DEFAULT";
 			toolTip = "Load Default";
 		};
-		class meu_LOButtonSave: meu_LOButton_RscButton_base
+		class mar_LOButtonSave: mar_LOButton_RscButton_base
 		{
-			idc = MEU_CTRL_BUTTONSAVE;
+			idc = mar_CTRL_BUTTONSAVE;
 			/* x = 28.97 * GUI_GRID_W + GUI_GRID_X;
 			y = 24.03 * GUI_GRID_H + GUI_GRID_Y; */
 			x = 34 * GUI_GRID_W + GUI_GRID_X;
@@ -507,9 +507,9 @@ class meu_loadoutManager
 			
 			onMouseButtonClick = STR_CALL_FUNC("buttons",_this);
 		};
-		class meu_LOButtonClose: meu_LOButton_RscButton_base
+		class mar_LOButtonClose: mar_LOButton_RscButton_base
 		{
-			idc = MEU_CTRL_BUTTONCLOSE;
+			idc = mar_CTRL_BUTTONCLOSE;
 			x = 34 * GUI_GRID_W + GUI_GRID_X;
 			y = 24.03 * GUI_GRID_H + GUI_GRID_Y;
 			action = "closeDialog 0;";
@@ -519,18 +519,18 @@ class meu_loadoutManager
 		////////////////////////////
 		//// SAVING CONTROLS
 		//////////////////////////// 
-		class meu_LOSaveBG: meu_LOBoxPic
+		class mar_LOSaveBG: mar_LOBoxPic
 		{
-			idc = MEU_CTRL_SAVEBG;
+			idc = mar_CTRL_SAVEBG;
 			x = 6 * GUI_GRID_W + GUI_GRID_X; 
 			y = 10.95 * GUI_GRID_H + GUI_GRID_Y;
 			w = 28 * GUI_GRID_W;
 			h = 3 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,1};
 		};
-		class meu_LOSaveEdit_RscEdit_base // base class RscEdit
+		class mar_LOSaveEdit_RscEdit_base // base class RscEdit
 		{
-			idc = MEU_CTRL_SAVEEDIT;
+			idc = mar_CTRL_SAVEEDIT;
 			text = "";
 			x = 7 * GUI_GRID_W + GUI_GRID_X;
 			y = 12 * GUI_GRID_H + GUI_GRID_Y;
@@ -540,7 +540,7 @@ class meu_loadoutManager
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 32) * 1)";
 			colorText[] = {1,0.5,0,1}; 
 			// return: 28  num enter: 156
-			onKeyDown = "if ( _this select 1 in [28,156] ) then { ['buttons',_this] call meu_fnc_manager; };";
+			onKeyDown = "if ( _this select 1 in [28,156] ) then { ['buttons',_this] call mar_fnc_manager; };";
 			
 			deletable = 0;
 			fade = 0;
@@ -564,9 +564,9 @@ class meu_loadoutManager
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 		};	
-		class meu_LOSaveSave: meu_LOButton_RscButton_base
+		class mar_LOSaveSave: mar_LOButton_RscButton_base
 		{
-			idc = MEU_CTRL_SAVESAVE;
+			idc = mar_CTRL_SAVESAVE;
 			x = 22 * GUI_GRID_W + GUI_GRID_X;
 			y = 12.25 * GUI_GRID_H + GUI_GRID_Y;
 			text = "SAVE";
@@ -575,9 +575,9 @@ class meu_loadoutManager
 			
 			onMouseButtonClick = STR_CALL_FUNC("buttons",_this);
 		};
-		class meu_LOSaveRename: meu_LOButton_RscButton_base
+		class mar_LOSaveRename: mar_LOButton_RscButton_base
 		{
-			idc = MEU_CTRL_SAVERENAME;
+			idc = mar_CTRL_SAVERENAME;
 			x = 22 * GUI_GRID_W + GUI_GRID_X;
 			y = 12.25 * GUI_GRID_H + GUI_GRID_Y;
 			text = "SAVE";
@@ -586,9 +586,9 @@ class meu_loadoutManager
 			
 			onMouseButtonClick = STR_CALL_FUNC("buttons",_this);
 		};
-		class meu_LOSaveCancel: meu_LOButton_RscButton_base
+		class mar_LOSaveCancel: mar_LOButton_RscButton_base
 		{
-			idc = MEU_CTRL_SAVECANCEL;
+			idc = mar_CTRL_SAVECANCEL;
 			x = 28 * GUI_GRID_W + GUI_GRID_X;
 			y = 12.25 * GUI_GRID_H + GUI_GRID_Y;
 			text = "CANCEL";
@@ -597,9 +597,9 @@ class meu_loadoutManager
 			
 			onMouseButtonClick = STR_CALL_FUNC("buttons",_this);
 		};
-		class meu_LOSaveText: meu_LOTextHeader_RscText_base
+		class mar_LOSaveText: mar_LOTextHeader_RscText_base
 		{
-			idc = MEU_CTRL_SAVETEXT;
+			idc = mar_CTRL_SAVETEXT;
             x = 7 * GUI_GRID_W + GUI_GRID_X;
 			y = 11 * GUI_GRID_H + GUI_GRID_Y; //1
             w = 10 * GUI_GRID_W;
@@ -608,12 +608,12 @@ class meu_loadoutManager
 			shadow = 0;
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 35) * 1)";
 		};
-		class meu_LOSaveClear: meu_LOXClose_RscActiveText_base
+		class mar_LOSaveClear: mar_LOXClose_RscActiveText_base
 		{
-			idc = MEU_CTRL_SAVECLEAR;
+			idc = mar_CTRL_SAVECLEAR;
 			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa";
 			tooltip = "Clear";
-			action = "((uiNamespace getVariable 'meu_managerGUI') displayCtrl  15061) ctrlSetText ''; ctrlSetFocus ((uiNamespace getVariable 'meu_managerGUI') displayCtrl  15061);";
+			action = "((uiNamespace getVariable 'mar_managerGUI') displayCtrl  15061) ctrlSetText ''; ctrlSetFocus ((uiNamespace getVariable 'mar_managerGUI') displayCtrl  15061);";
 			
 			x = 6.3 * GUI_GRID_W + GUI_GRID_X;
 			y = 12.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -623,18 +623,18 @@ class meu_loadoutManager
 		////////////////////////////
 		//// SAVED PREVIEW
 		////////////////////////////
-		class meu_LOPrevBG: meu_LOBoxPic
+		class mar_LOPrevBG: mar_LOBoxPic
 		{
-			idc = MEU_CTRL_PREVBG;
+			idc = mar_CTRL_PREVBG;
 			x = 22 * GUI_GRID_W + GUI_GRID_X; 
 			y = 4 * GUI_GRID_H + GUI_GRID_Y;
 			w = 16 * GUI_GRID_W; // 14
 			h = 19 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,1};
 		};
-		class meu_LOPrevTree: meu_LOListGear_RscTree_base 
+		class mar_LOPrevTree: mar_LOListGear_RscTree_base 
 		{
-			idc = MEU_CTRL_PREVTREE;
+			idc = mar_CTRL_PREVTREE;
 			x = 22.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 15 * GUI_GRID_W;
@@ -642,9 +642,9 @@ class meu_loadoutManager
 			colorBackground[] = {0,0,0,1};
 			colorBorder[] = {1,0.5,0,1};
 		};
-		class meu_LOPrevClose: meu_LOButton_RscButton_base
+		class mar_LOPrevClose: mar_LOButton_RscButton_base
 		{
-			idc = MEU_CTRL_PREVCLOSE;
+			idc = mar_CTRL_PREVCLOSE;
 			x = 27.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 21.5 * GUI_GRID_H + GUI_GRID_Y;
 			text = "CLOSE";
@@ -653,9 +653,9 @@ class meu_loadoutManager
 			
 			onMouseButtonClick = STR_CALL_FUNC("buttons",_this);
 		};
-		class meu_LOPrevText: meu_LOTextHeader_RscText_base
+		class mar_LOPrevText: mar_LOTextHeader_RscText_base
 		{
-			idc = MEU_CTRL_PREVTEXT;
+			idc = mar_CTRL_PREVTEXT;
             x = 22.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 4 * GUI_GRID_H + GUI_GRID_Y; //1
             w = 10 * GUI_GRID_W;
@@ -669,27 +669,27 @@ class meu_loadoutManager
 
 class cfgHints
 {
-	class meu_manager
+	class mar_manager
 	{
-		displayname = "1-4th Ammo Boxes";
-		class meu_usage
+		displayname = "1/4 Ammo Boxes";
+		class mar_usage
 		{
-			displayName = "1-4th Loadout Manager 2";
+			displayName = "1/4 Loadout Manager 2";
 			displayNameShort = "The Best In The Business.";
-			description = "1-4th AmmoBoxes come with a loadout manager. There are a few things you should know.%1%1Make your loadouts exactly how you want them. Including your radio frequencies.%1%1%3Double Click%4 - View gear in saved loadout.%1%3CTRL + Double Click%4 - Rename Loadout.%1%3SHFT + Double Click%4 - Add to favorites.%1%3CTRL + Click Save%4 - Quick save loadout with the same name%1%3DEL%4 - Delete Loadout.%1%1Enjoy!";
+			description = "1/4 AmmoBoxes come with a loadout manager. There are a few things you should know.%1%1Make your loadouts exactly how you want them. Including your radio frequencies.%1%1%3Double Click%4 - View gear in saved loadout.%1%3CTRL + Double Click%4 - Rename Loadout.%1%3SHFT + Double Click%4 - Add to favorites.%1%3CTRL + Click Save%4 - Quick save loadout with the same name%1%3DEL%4 - Delete Loadout.%1%1Enjoy!";
 			tip = "Please report any problems on the forums.";
 			arguments[] = {};
-			image = "\RCT6_ammoBoxes\loadoutManager\logo256.paa";
+			image = "\Marine_Ammoboxes\loadoutManager\logo256.paa";
 			noImage = false;
 		};
-		class meu_other
+		class mar_other
 		{
 			displayName = "Other Info";
 			displayNameShort = "";
-			description = "Other Info:%1- Packed weapons have thier attachments saved but loaded seperately.%1- To save loaded designator batteries, have an extra in your inventory.%1- GUI colors are set from your Arma profile.%1- Mission Makers can disabled the ""gear in box"" check with %3box setVariable [""meu_boxRestrictions"",false]%4%1- You can add the LOM to any object with %3[""init"",[_crate]] call meu_fnc_manager;%4";
+			description = "Other Info:%1- Packed weapons have thier attachments saved but loaded seperately.%1- To save loaded designator batteries, have an extra in your inventory.%1- GUI colors are set from your Arma profile.%1- Mission Makers can disabled the ""gear in box"" check with %3box setVariable [""mar_boxRestrictions"",false]%4%1- You can add the LOM to any object with %3[""init"",[_crate]] call mar_fnc_manager;%4";
 			tip = "Riouken Created The Original Loadout Manager.";
 			arguments[] = {};
-			image = "\RCT6_ammoBoxes\loadoutManager\logo256.paa";
+			image = "\Marine_Ammoboxes\loadoutManager\logo256.paa";
 			noImage = false;
 		};
 	};

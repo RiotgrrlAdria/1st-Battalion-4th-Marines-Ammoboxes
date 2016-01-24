@@ -23,7 +23,7 @@ params [
 if (typeName _unit == typeName []) exitWith {
 	{
 		private "_run";
-		_run = [_x,_gear,_clear,_note] spawn meu_fnc_vehicleLoadout;
+		_run = [_x,_gear,_clear,_note] spawn mar_fnc_vehicleLoadout;
 	} forEach _unit;
 	true
 };
@@ -82,7 +82,7 @@ if _note then {
 		_picture = (getText (_cfgVeh >> "picture")) call bis_fnc_textureVehicleIcon;
 		_name = getText (_cfgVeh >> "displayName");
 		_text = _startText + " " + _name;
-		["meu_vicCrates",[_picture,_text]] call bis_fnc_showNotification;
+		["mar_vicCrates",[_picture,_text]] call bis_fnc_showNotification;
 	};
 };
 

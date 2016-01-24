@@ -29,8 +29,8 @@ New:
 - quick save
 - freakin favorites!
 - save TFAR freqs on assigned radio - loads on all radios
-- add manager to any non-1-4th box with ( ["init",[box]] spawn meu_fnc_manager )
-- can disable "gear in box" check ( box setVariable ["meu_boxRestrictions",false] )
+- add manager to any non-1/4 box with ( ["init",[box]] spawn mar_fnc_manager )
+- can disable "gear in box" check ( box setVariable ["mar_boxRestrictions",false] )
 - better initialization
 - better organization
 - better optimisation
