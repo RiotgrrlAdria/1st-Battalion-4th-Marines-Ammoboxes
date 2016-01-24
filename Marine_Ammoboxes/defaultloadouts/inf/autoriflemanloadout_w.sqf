@@ -1,4 +1,4 @@
-// REVISION 11JAN16
+// REVISION 24JAN16
 
 //USMC Autorifleman Woodland Loadout
  _unit = _this select 1;
@@ -13,7 +13,7 @@
  removeheadgear _unit;
 
  _unit addvest "rhsusf_spc_iar";
- _unit addheadgear "rhsusf_mich_helmet_marpatwd_alt"; 
+ _unit addheadgear "rhsusf_lwh_helmet_marpatwd"; 
 
  _unit unassignItem "nvgoggles";
  _unit removeItem "nvgoggles";
