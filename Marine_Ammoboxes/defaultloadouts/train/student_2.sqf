@@ -1,4 +1,4 @@
-// REVISION 11JAN16
+// REVISION 24JAN16
 
 //USMC Student Stage 2
 //Includes all basic equipment including weapons, but no magazines.
@@ -15,7 +15,7 @@
  removeheadgear _unit;
 
  _unit addvest "rhsusf_spc";
- _unit addheadgear "rhsusf_mich_helmet_marpatwd"; 
+ _unit addheadgear "rhsusf_lwh_helmet_marpatwd"; 
 
  _unit unassignItem "nvgoggles";
  _unit removeItem "nvgoggles";
